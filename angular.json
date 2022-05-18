@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "SimulacroPrimerParcial:build:production",
+            "firebaseProject": "simulacrodeprimerparcial",
+            "firebaseHostingSite": "simulacrodeparcial"
+          }
         }
       }
     }

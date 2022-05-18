@@ -1,0 +1,39 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Países</span>
+            </h4>
+           <app-tabla-paises (onSeleccionPais)="elegirPais($event)" ></app-tabla-paises> 
+        </div>
+
+        <div class="col-md-8 order-md-1" style="margin-top: 2rem;">
+            <h4 class="mb-3">Alta Actor</h4>
+            <form class="needs-validation" novalidate>
+                <div class="columns">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">Nombre</label>
+                        <input [(ngModel)]="nombre" type="text" class="form-control" name="nombre" placeholder="" value="" required>
+                     </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Apellido</label>
+                        <input type="text" class="form-control" [(ngModel)]="apellido" name="apellido" placeholder="" value="" required>
+                       </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 mb-3">
+                        <label for="country">Pais</label>
+                        <input type="text" readonly=true class="form-control" [(ngModel)]="pais" name="pais" placeholder="Elegir de la tabla de países" required>
+                    </div>
+
+                </div> 
+                <br/>
+                <button class="btn btn-primary btn-lg btn-block" type="submit" (click)="guardarActor()" >Cargar actor</button> 
+            </form>
+
+        </div>
+    </div>
+
+</div>

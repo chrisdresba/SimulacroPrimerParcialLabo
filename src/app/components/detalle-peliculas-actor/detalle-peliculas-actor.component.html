@@ -1,0 +1,16 @@
+<div *ngIf="!hayPeliculas">
+</div>
+
+<div *ngIf="hayPeliculas">
+    <div class="card" style="width:250px">
+        <div class="card-body">
+            <h5 class="card-title">Peliculas del Actor</h5>
+            <ul style="list-style:none ; margin-right: 20px;">
+                <li *ngFor="let pelicula of peliculas"> 
+                    <img src={{pelicula.foto}} alt="no image" widht="80px" height="100px">
+                     <br>
+                    {{pelicula.nombre}} , Genero: {{pelicula.tipo}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

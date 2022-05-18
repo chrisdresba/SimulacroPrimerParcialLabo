@@ -1,0 +1,16 @@
+<div *ngIf="!pais">
+    <p> Seleccione un actor </p>
+</div>
+
+<div *ngIf="pais">
+    <div class="card" style="width:250px">
+        <div class="card-body">
+            <ul style="list-style:none ; margin-right: 20px;">
+                <li style="font-size: 2rem;">{{pais.pais}}</li>
+                <br>
+               <li> <img style="max-height: 5rem;" [src]="pais.imagen" [alt]="pais.pais">
+               </li>
+            </ul>
+        </div>
+    </div>
+</div>

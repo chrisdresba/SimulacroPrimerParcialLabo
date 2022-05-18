@@ -1,0 +1,32 @@
+<div id="container">
+
+  <main role="main">
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Listado de actores</h1>
+        <app-actor-listado [listadoActores]="listadoActores" style="margin-top:-50px"
+          (actorSeleccionado)="tomarActorParaDetalles($event)"> </app-actor-listado>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Peliculas</h2>
+          <app-detalle-peliculas-actor [hayPeliculas]="hayPeliculas" [peliculas]="peliculas">
+          </app-detalle-peliculas-actor>
+        </div>
+        <div class="col-md-4">
+          <h2>Nacionalidad</h2>
+          <app-detalle-pais [pais]="pais"></app-detalle-pais>
+        </div>
+        <div class="col-md-4">
+          <h2>Detalles</h2>
+          <app-detalle-actor [actorParaMostrar]="actorSeleccionado"></app-detalle-actor>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </main>
+</div>

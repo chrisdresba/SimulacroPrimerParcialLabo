@@ -1,0 +1,19 @@
+<table class="table table-striped actores">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Nacionalidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let actor of listadoActores">
+            <td>{{actor.nombre}}</td>
+            <td>{{actor.apellido}}</td>
+            <td>{{actor.pais}}</td>
+            <td><button type="button" class="btn btn-info  btn-circle" (click)="eligeActor(actor)"><i
+                        class="fa fa-check"></i>+ info</button></td>
+        </tr>
+
+    </tbody>
+</table>

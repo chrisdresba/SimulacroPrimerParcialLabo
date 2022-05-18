@@ -1,0 +1,68 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Actores</span>
+            </h4>
+            <app-tabla-actor (onSeleccionActor)="elegirActor($event)"></app-tabla-actor>
+        </div>
+
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Alta Pelicula</h4>
+            <form class="needs-validation" novalidate>
+                <div class="columns">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">Nombre</label>
+                        <input [(ngModel)]="nombrePelicula" type="text" class="form-control" name="nombre"
+                            placeholder="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="tipo">Tipo</label>
+                        <br>
+                        <select name="tipo" [(ngModel)]="tipo">
+                            <option value="terror">Terror</option>
+                            <option value="comedia">Comedia</option>
+                            <option value="amor">Amor</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Fecha de Estreno</label>
+                        <input type="date" class="form-control" [(ngModel)]="fecha" name="fecha" placeholder="" value=""
+                            required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Cantidad</label>
+                        <input type="text" class="form-control" [(ngModel)]="cantidad" name="cantidad" placeholder=""
+                            value="" required>
+                    </div>
+                    <div class="row-md-6 mb-3" >
+                        <label for="lastName">Foto</label>
+                        <div style="display :flex;flex-direction :row;">
+                        <input type="file" class="form-control" [(ngModel)]="foto" (input)="subirArchivo($event)"
+                            accept=".jpeg,.jpg,.png,.svg" required style="width: 160px;height: 35px;margin-right: 250px;">
+                        <img src="{{imagenes[0]}}"  onerror="this.onerror=null;this.src='assets/noimage.jpg';"
+                            alt="imagenes subidas" width="120px" height="150px">
+                        </div>
+                        </div>
+
+                </div>
+
+                <div class="col-md-6 mb-3" style="margin-top: -100px">
+                    <label for="tipo">Actores</label>
+                    <br>
+                    <select name="tipo" [(ngModel)]="actores" style="width: 45vh; height: 5vh;">
+                        <option *ngFor="let actor of actores" readonly=true>
+                            {{actor.nombre}} {{actor.apellido}} </option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary btn-lg btn-block" type="submit" (click)="guardarPelicula()">Cargar
+                    pelicula</button>
+            </form>
+
+        </div>
+    </div>
+
+</div>

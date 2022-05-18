@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "simulacrodeprimerparcial": {
+      "hosting": {
+        "SimulacroPrimerParcial": [
+          "simulacrodeparcial"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "simulacrodeprimerparcial"
+  }
+}

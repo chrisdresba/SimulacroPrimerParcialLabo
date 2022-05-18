@@ -1,0 +1,36 @@
+<div id="container">
+
+  <main role="main">
+
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Listado de peliculas</h1>
+        <app-tabla-pelicula [listadoPeliculas]="listadoPeliculas"
+          (peliculaSeleccionada)="tomarPeliculaParaDetalles($event)"></app-tabla-pelicula>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Para borrar</h2>
+          <p>Aqui van los controles necesarios, según la entidad y funcionalidad requerida.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Solo mostrar</h2>
+          <app-detalle-pelicula [peliculaParaMostrar]="peliculaSeleccionada"></app-detalle-pelicula>
+        </div>
+        <div class="col-md-4">
+          <h2>Modificar</h2>
+          <p>Aqui van los controles necesarios, según la entidad y funcionalidad requerida.</p>
+        </div>
+      </div>
+
+      <hr>
+
+    </div>
+
+  </main>
+</div>

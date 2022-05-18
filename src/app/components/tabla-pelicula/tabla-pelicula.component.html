@@ -1,0 +1,22 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Fecha de Estreno</th>
+            <th>Foto</th>
+            <th>Accion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pelicula of listadoPeliculas">
+            <td>{{pelicula.nombre}}</td>
+            <td>{{pelicula.tipo}}</td>
+            <td>{{pelicula.fecha}}</td>
+            <td><img src={{pelicula.foto}} alt="image" width="50px" height="70px"></td>
+            <td><button type="button" class="btn btn-info  btn-circle" (click)="eligePelicula(pelicula)">Detalles<i class="fa fa-check"></i>
+        </button></td>
+        </tr>
+
+    </tbody>
+</table>

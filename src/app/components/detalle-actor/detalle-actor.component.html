@@ -1,0 +1,16 @@
+<div *ngIf="!actorParaMostrar">
+    <p> seleccione un Actor </p>
+</div>
+
+<div *ngIf="actorParaMostrar">
+    <div class="card" style="width:250px">
+        <div class="card-body">
+            <h3 class="card-title">Actor</h3>
+            <ul style="list-style:none ; margin-right: 20px;">
+                <li>Nombre: {{actorParaMostrar.nombre}}</li>
+                <li>Apellido: {{actorParaMostrar.apellido}}</li>
+                <li>Nacionalidad: {{actorParaMostrar.pais}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
